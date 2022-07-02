@@ -51,7 +51,7 @@ const Details = ({ route, navigation }) => {
       <View
         style={{
           width: "100%",
-          position: "absolute",
+          position: "fixed",
           bottom: 0,
           paddingVertical: SIZES.font,
           justifyContent: "center",
@@ -72,18 +72,19 @@ const Details = ({ route, navigation }) => {
           <React.Fragment>
             <DetailsHeader data={data} navigation={navigation} />
             <SubInfo />
-            <View style={{ padding: SIZES.font}}>
+            <View style={{ padding: SIZES.font }}>
               <DetailsDesc data={data} />
               {data.bids.length > 0 && (
-                <Text style={{
-                  fontSize: SIZES.font,
-                  fontFamily: FONTS.semiBold,
-                  color: COLORS.primary
-                }}>
-                  Current Bid
+                <Text
+                  style={{
+                    fontSize: SIZES.font,
+                    fontFamily: FONTS.semiBold,
+                    color: COLORS.primary,
+                  }}
+                >
+                  Current Bids
                 </Text>
               )}
-
             </View>
           </React.Fragment>
         )}
