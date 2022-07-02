@@ -1,5 +1,5 @@
 import { StatusBar } from 'react-native';
-import { useIsFocused } from '@react-navigation/native';
+import { useIsFocused } from '@react-navigation/core';
 
 const FocusedStatusBar = (props) => {
   const IsFocused = useIsFocused();
@@ -7,4 +7,4 @@ const FocusedStatusBar = (props) => {
   return IsFocused ? <StatusBar animated={true} {...props} /> : null;
 }
 
-export default FocusedStatusBar
+export default FocusedStatusBar;
